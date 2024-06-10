@@ -110,6 +110,41 @@ form input {
 #contact_modal {
   display: none; }
 
+#overlay {
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: none;
+}
+body.modal-opened {
+  overflow: hidden;
+}
+body.modal-opened #overlay, body.modal-opened #contact_modal {
+  display: block;
+} 
+
+#mediaContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+#mediaContainer .media {
+  width: 30%;
+}
+#mediaContainer .media img, #carousel .media img {
+  max-width: 100%;
+}
+#carousel .media img {
+  height: 90vh;
+  width: auto;
+  object-fit: contain;
+}
+
 .modal {
   border-radius: 5px;
   background-color: #DB8876;
